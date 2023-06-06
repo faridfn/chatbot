@@ -1,0 +1,362 @@
+*, html, body {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: helvetica;
+}
+
+body {
+ background-color: black;
+ color: white;
+ -webkit-user-select: none;
+}
+
+header {
+ position: fixed;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: black;
+ width: 100%;
+ height: 57px;
+ top: 0;
+ z-index: 10;
+ border-bottom: 2px solid #7f1a09;
+}
+
+.headerUser ion-icon {
+ color: #5AFF00;
+ width: 23px;
+ height: 23px;
+ padding: 5px;
+ border-radius: 50%;
+ transition: .3s ease-in-out;
+}
+
+
+.headerUser ion-icon:hover {
+ opacity: .7;
+ background: #941a00;
+}
+
+header .headerUser {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+}
+
+header .imgbox {
+ position: relative;
+ background: #7f1a09;
+ width: 45px;
+ height: 45px;
+ margin-left: 5px;
+ border-radius: 6%;
+ animation: border 8s infinite;
+}
+
+header .imgbox img {
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ border-radius: 10%;
+ object-fit: cover;
+}
+
+@keyframes border {
+ 0% {
+  border: 1.5px solid #7f1a09;
+ }
+ 50% {
+  border: 1.5px solid #e22b0d;
+  box-shadow: 0 0 3px #e22b0d, 0 0 15px #e22b0d;
+ }
+ 100% {
+  border: 1.5px solid #7f1a09;
+ }
+}
+
+header .info {
+ color: white;
+ width: 100px;
+ margin-right: 50px;
+}
+
+header .info .user {
+ font-size: 17.5px;
+ color: #5AFF00;
+ font-weight: 600;
+}
+
+header .info .status {
+ font-size: 13.5px;
+ color: #b92810;
+}
+
+.container {
+ display: flex;
+ z-index: 1;
+ min-height: 200vh;
+ flex-direction: column;
+}
+
+.container .wrapper {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ bottom: 0;
+ z-index: 10;
+ position: fixed;
+ background-color: black;
+}
+
+.container .wrapper .containerInput {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.container .wrapper .footer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin-top: 5px;
+}
+
+.container .wrapper .footer {
+ width: 90%;
+ color: #7c7c7c;
+ font-size: 13px;
+}
+
+.container .wrapper .containerInput input {
+ width: 85%;
+ height: 35px;
+ border: none;
+ outline: none;
+ color: #5A9B0C;
+ padding: 0 20px;
+ font-weight: 420;
+ font-size: 15.5px;
+ border-radius: 35px;
+ background-color: black;
+ border: 1.5px solid #CE2400;
+}
+
+.container .wrapper button {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 35px;
+ width: 35px;
+ margin: 0 5px;
+ outline: none;
+ border-radius: 10px;
+ border: none;
+ font-size: 15px;
+ font-weight: 500;
+ background-color: black;
+ color: #5A9B0C;
+ border: 1.5px solid #CE2400;
+}
+
+.container .wrapper .barier {
+ position: absolute;
+ display: none;
+ z-index: 11;
+ content: '';
+ right: 7px;
+ top: 0;
+ width: 40px;
+ height: 40px;
+ background: blue;
+}
+
+.container .wrapper button ion-icon {
+ margin-left: 5px;
+ font-size: 20px;
+}
+
+.container .date {
+  position: sticky;
+  top: 65px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 3px;
+  width: 100px;
+  color: white;
+  z-index: 10;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 65px;
+  background: #292221;
+  border-radius: 10px;
+}
+
+.container .about {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  z-index: 9;
+  width: 250px;
+  padding: 8px;
+  font-size: 12px;
+  margin-top: 15px;
+  background: #991d09;
+  border-radius: 10px;
+}
+
+.container .about ion-icon {
+  color: #A5FF00;
+  font-size: 10px;
+}
+
+.container .containerChat {
+  z-index: 9;
+  position: relative;
+  border: 0px solid blue;
+}
+
+.container .containerChat .chatPertanyaan {
+  position: relative;
+  margin-top: 30px;
+  width: 80%;
+  height: auto;
+  margin-left: 15px;
+  background: #383838;
+  padding: 7px 7px 18px 13px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #383838, 0 0 10px #383838;
+}
+
+.container .chatPertanyaan:before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: #383838;
+  border-radius: 2px;
+  transform: rotate(135deg);
+  right: calc(100% + -18px);
+  box-shadow: 0 0 5px #383838, 0 0 7px #383838;
+}
+
+.container .containerChat .chatPertanyaan #TextPertanyaan {
+  font-size: 15px;
+  font-weight: 405;
+  position: relative;
+}
+
+.container .containerChat .chatPertanyaan #firstPertanyaan {
+  font-size: 15px;
+  font-weight: 405;
+  position: relative;
+}
+
+.container .containerChat .chatPertanyaan #timeQuestion {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  color: #939599;
+  font-weight: 420;
+  font-size: 11.5px;
+  margin-right: 4px;
+}
+/* PERTANYAAN END */
+
+.container .containerChat .chatJawaban {
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  width: 80%;
+  height: auto;
+  margin-left: 50px;
+  border-radius: 5px;
+  background: #991d09;
+  padding: 7px 7px 18px 10px;
+  box-shadow: 0 0 5px #991d09, 0 0 7px #991d09;
+}
+
+.container .chatJawaban:before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: #991d09;
+  border-radius: 2px;
+  transform: rotate(135deg);
+  left: calc(100% + -18px);
+  box-shadow: 0 0 5px #991d09, 0 0 10px #991d09;
+}
+
+.container .containerChat .chatJawaban #textJawaban {
+  width: 99%;
+  font-size: 15px;
+  font-weight: 405;
+  position: relative;
+}
+
+.container .containerChat .chatJawaban #firstJawaban {
+  font-size: 15px;
+  font-weight: 405;
+  position: relative;
+}
+
+.container .containerChat .chatJawaban span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  width: 50px;
+  height: 15px;
+}
+
+.container .containerChat .chatJawaban span #timeAsk {
+  bottom: 3px;
+  color: #939599;
+  font-weight: 420;
+  font-size: 11.5px;
+  margin-right: 4px;
+}
+
+.container .containerChat .chatJawaban span #check2 {
+  color: #A5FF00;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+ 
+/* BACKGROUND CSS*/
+
+i {
+ position: absolute;
+ height: 200px;
+ border-bottom-left-radius: 5px;
+ border-bottom-right-radius: 5px;
+ background: linear-gradient(transparent, #fff);
+ animation: hujan 5s infinite;
+}
+
+i:nth-child(2n+1) {
+ background: linear-gradient(transparent, #CE2400);
+}
+i:nth-child(2n+2) {
+ background: linear-gradient(transparent,  #5AFF00);
+}
+
+@keyframes hujan {
+ 0% {
+  transform: translateY(-150px);
+ }
+ 100% {
+  transform: translateY(calc(200vh + -150px));
+ }
+}

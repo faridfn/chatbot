@@ -1,0 +1,72 @@
+<DOCTYPE.html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="favicon.ico" favicon.ico/>
+  <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no"/>
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="style.css"/>
+ </head>
+ <body onload="startTime()">
+ <header>
+  <div class="headerUser">
+   <ion-icon name="arrow-back-sharp"></ion-icon>
+   <div class="imgbox">
+    <img src="favicon.webp" alt="FrdFn.logo"/>
+   </div>
+   <div class="info">
+     <p class="user">FaBot Chat</p>
+     <p class="status">Online</p>
+   </div>
+    <ion-icon id="mail" name="mail-sharp"></ion-icon>
+    <ion-icon id="ellips" name="ellipsis-vertical-sharp"></ion-icon>
+  </div>
+ </header>
+  <div class="container">
+   <div class="wrapper">
+    <div class="containerInput">
+      <input id="jawaban" type="text" placeholder="Silahkan Jawab"/>
+      <div class="barier"></div>
+      <button onclick="botStart()" id="btn"><ion-icon name="send-sharp"></ion-icon></button>
+     </div>
+     <div class="footer">
+       <p>This website is made only for learning in development a website, FaBot-Chat <u>5 June Version.</u></p>
+     </div>
+   </div>
+   <div class="date">
+     <p>31 Mei 2023</p>
+   </div>
+   <div class="about">
+     <p><ion-icon name="lock-closed"></ion-icon> pesan dan riwayat chat terenkripsi secara end-to-end. tidak seorang pun di luar chat ini, termasuk developer, yang dapat membaca atau melihatnya.</p>
+   </div>
+   <div class="containerChat" id="firstContentPertanyaan">
+     <div class="chatPertanyaan" id="firstChatPertanyaan">
+       <p id="firstPertanyaan">pertanyaan</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+   <div class="containerChat" id="contentJawaban">
+       <div class="chatJawaban" id="chatJawaban">
+         <p id="textJawaban">Jawaban</p>
+         <span>
+          <p id="timeAsk"></p>
+          <ion-icon name="checkmark-done-sharp" id="check2"></ion-icon>
+         </span>
+       </div>
+   </div>
+   <div class="containerChat" id="contentPertanyaan">
+     <div class="chatPertanyaan" id="chatPertanyaan">
+       <p id="textPertanyaan">pertanyaan kedua</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+   
+  </div>
+ </body>
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ <script src="chatbot.js"></script>
+ <script>
+  
+ </script>
+</html>
